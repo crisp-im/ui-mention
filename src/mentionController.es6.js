@@ -290,10 +290,6 @@ angular.module('ui.mention')
     } else {
       this.cancel();
     }
-
-    if (!$scope.$$phase) {
-      $scope.$apply();
-    }
   });
 
   $element.on('keydown', event => {
@@ -317,10 +313,6 @@ angular.module('ui.mention')
 
     this.moved = true;
     event.preventDefault();
-
-    if (!$scope.$$phase) {
-      $scope.$apply();
-    }
   });
 
   this.onMouseup = (function(event) {
